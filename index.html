@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bailin Wu</title>
+  <style>
+    :root {
+      --bg: #f4efe7;
+      --bg-deep: #e8dccb;
+      --text: #1f1a17;
+      --muted: rgba(31, 26, 23, 0.18);
+      --card: rgba(255, 252, 247, 0.7);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      overflow: hidden;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(185, 124, 72, 0.22), transparent 34%),
+        radial-gradient(circle at bottom right, rgba(52, 103, 120, 0.20), transparent 38%),
+        linear-gradient(135deg, var(--bg) 0%, var(--bg-deep) 100%);
+      font-family: "Aptos", "Segoe UI", sans-serif;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      border-radius: 999px;
+      pointer-events: none;
+      filter: blur(10px);
+    }
+
+    body::before {
+      width: 40vmax;
+      height: 40vmax;
+      top: -12vmax;
+      right: -10vmax;
+      background: rgba(90, 133, 145, 0.10);
+    }
+
+    body::after {
+      width: 34vmax;
+      height: 34vmax;
+      bottom: -12vmax;
+      left: -10vmax;
+      background: rgba(175, 117, 82, 0.12);
+    }
+
+    main {
+      width: min(100%, 980px);
+      padding: clamp(32px, 6vw, 72px);
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      border-radius: 28px;
+      background: var(--card);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 18px 60px rgba(72, 55, 38, 0.12);
+      text-align: center;
+    }
+
+    .frame {
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+      max-width: 100%;
+    }
+
+    .line {
+      width: clamp(36px, 9vw, 96px);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--muted), transparent);
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+      font-size: clamp(3rem, 9vw, 7.5rem);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      line-height: 0.95;
+    }
+
+    @media (max-width: 640px) {
+      .frame {
+        gap: 12px;
+      }
+
+      h1 {
+        letter-spacing: 0.04em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="frame" aria-label="Bailin Wu">
+      <span class="line" aria-hidden="true"></span>
+      <h1>Bailin Wu</h1>
+      <span class="line" aria-hidden="true"></span>
+    </div>
+  </main>
+</body>
+</html>
